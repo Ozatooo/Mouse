@@ -15,7 +15,7 @@ public:
 };
 int file::loop(float x, float y)
 {
-    inFile<<x<<","<<y<<endl;   
+    inFile<<x<<" "<<y<<endl;   
 }
 
 
@@ -33,6 +33,8 @@ int main()
 
 	{
 		if (GetKeyState(VK_F12)) {// F12 wyłącza program
+			    cout<<"plik zamknięty"<<inFile.close();
+
 				exit(1);
 		} 
 		POINT cursorPos;
