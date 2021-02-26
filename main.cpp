@@ -2,6 +2,8 @@
 #include <Windows.h>
 #include <fstream>
 #include <cstdlib>
+#include <conio.h>
+
 using namespace std;
 	ofstream inFile;
 class file
@@ -26,10 +28,13 @@ int main()
 	file f;
 	cout << "Hello World!\n";
 	inFile.open("wynik.txt");
-
+	
 	while (1)
 
 	{
+		if (GetKeyState(VK_F12)) {// F12 wyłącza program
+				exit(1);
+		} 
 		POINT cursorPos;
 		GetCursorPos(&cursorPos);
 		float x = 0;
@@ -56,7 +61,6 @@ int main()
 
 	}
 	
-	    inFile.close();   
 
 
 }
