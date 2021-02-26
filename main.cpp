@@ -33,7 +33,8 @@ int main()
 
 	{
 		if (GetKeyState(VK_F12)) {// F12 wyłącza program
-			    cout<<"plik zamknięty"<<inFile.close();
+			    cout<<"plik zamknięty";
+			    inFile.close();
 
 				exit(1);
 		} 
